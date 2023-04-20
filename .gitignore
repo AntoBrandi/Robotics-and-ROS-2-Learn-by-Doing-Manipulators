@@ -1,5 +1,7 @@
 **/devel
 **/build
+**/install
+**/log
 **/.catkin_workspace
 **/.vscode
 **.pyc
