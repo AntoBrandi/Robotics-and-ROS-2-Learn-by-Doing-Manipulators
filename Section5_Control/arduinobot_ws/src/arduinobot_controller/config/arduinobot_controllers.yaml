@@ -5,9 +5,6 @@ controller_manager:
     arm_controller:
       type: joint_trajectory_controller/JointTrajectoryController
 
-    # gripper_controller:
-    #   type: forward_command_controller/ForwardCommandController
-
     gripper_controller:
       type: joint_trajectory_controller/JointTrajectoryController
 
@@ -34,7 +31,6 @@ gripper_controller:
   ros__parameters:
     joints:
       - joint_4
-    # interface_name: position
       
     command_interfaces:
       - position

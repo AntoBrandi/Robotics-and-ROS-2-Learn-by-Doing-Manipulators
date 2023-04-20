@@ -28,20 +28,6 @@ def generate_launch_description():
         parameters=[{"robot_description": robot_description}],
     )
 
-    controller_manager = Node(
-        package="controller_manager",
-        executable="ros2_control_node",
-        parameters=[
-            {"robot_description": robot_description,
-             "use_sim_time": "True"},
-            os.path.join(
-                get_package_share_directory("arduinobot_controller"),
-                "config",
-                "arduinobot_controllers.yaml",
-            ),
-        ],
-    )
-
     joint_state_broadcaster_spawner = Node(
         package="controller_manager",
         executable="spawner",
@@ -67,7 +53,6 @@ def generate_launch_description():
     return LaunchDescription(
         [
             robot_state_publisher_node,
-            controller_manager,
             joint_state_broadcaster_spawner,
             arm_controller_spawner,
             gripper_controller_spawner,
