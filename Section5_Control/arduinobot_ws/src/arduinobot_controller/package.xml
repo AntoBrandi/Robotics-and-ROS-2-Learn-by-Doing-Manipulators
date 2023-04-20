@@ -8,14 +8,12 @@
   <author email="antonio.brandi@outlook.it">Antonio Brandi</author>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
+  <buildtool_depend>ament_cmake_python</buildtool_depend>
 
-  <depend>hardware_interface</depend>
   <depend>rclcpp</depend>
-  <depend>rclcpp_lifecycle</depend>
-  <depend>pluginlib</depend>
-  <depend>libserial-dev</depend>
-
-  <exec_depend>controller_manager</exec_depend>
+  <depend>rclpy</depend>
+  <depend>trajectory_msgs</depend>
+  <depend>sensor_msgs</depend>
 
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>
