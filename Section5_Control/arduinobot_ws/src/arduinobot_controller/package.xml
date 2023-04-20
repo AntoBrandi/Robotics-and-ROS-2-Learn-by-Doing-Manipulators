@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>arduinobot_controller</name>
+  <version>0.0.0</version>
+  <description>The arduinobot_controller package</description>
+  <maintainer email="antonio.brandi@outlook.it">Antonio Brandi</maintainer>
+  <license>Apache 2.0</license>
+  <author email="antonio.brandi@outlook.it">Antonio Brandi</author>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>hardware_interface</depend>
+  <depend>rclcpp</depend>
+  <depend>rclcpp_lifecycle</depend>
+  <depend>pluginlib</depend>
+  <depend>libserial-dev</depend>
+
+  <exec_depend>controller_manager</exec_depend>
+
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+
+</package>

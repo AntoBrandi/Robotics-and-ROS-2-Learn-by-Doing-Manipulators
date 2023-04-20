@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="arduinobot">
+
+    <!-- Useful XACRO Variables (Properties) -->
+    <xacro:property name="PI" value="3.14159265359" />
+    <xacro:property name="effort" value="30.0" />
+    <xacro:property name="velocity" value="10.0" />
+    <xacro:property name="joint_arm_lower_limit" value="-${PI / 2}" />
+    <xacro:property name="joint_arm_upper_limit" value="${PI / 2}" />
+    <xacro:property name="joint_finger_right_lower_limit" value="-${PI / 2}" />
+    <xacro:property name="joint_finger_right_upper_limit" value="0.0" />
+    <xacro:property name="joint_finger_left_lower_limit" value="0.0" />
+    <xacro:property name="joint_finger_left_upper_limit" value="${PI / 2}" />
+
+</robot>
