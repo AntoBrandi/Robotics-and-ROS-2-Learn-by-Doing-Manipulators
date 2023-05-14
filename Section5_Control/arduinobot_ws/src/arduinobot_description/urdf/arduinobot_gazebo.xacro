@@ -1,9 +1,6 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="arduinobot">
 
-    <!-- Include XACRO Variables -->
-    <xacro:include filename="$(find arduinobot_description)/urdf/arduinobot_variables.xacro" />
-
     <!-- Gazebo ros2_control plugin -->
     <gazebo>
       <plugin filename="libgazebo_ros2_control.so" name="gazebo_ros2_control">

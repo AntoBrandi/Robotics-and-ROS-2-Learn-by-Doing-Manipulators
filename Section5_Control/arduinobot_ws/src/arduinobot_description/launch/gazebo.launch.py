@@ -46,8 +46,7 @@ def generate_launch_description():
 
     spawn_robot = Node(package='gazebo_ros', executable='spawn_entity.py',
                         arguments=['-entity', 'arduinobot',
-                                #    '-robot_namespace', 'arduinobot',
-                                      '-topic', 'robot_description',
+                                   '-topic', 'robot_description',
                                   ],
                         output='screen'
     )

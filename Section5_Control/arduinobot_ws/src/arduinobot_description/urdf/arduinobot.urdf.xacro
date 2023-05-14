@@ -1,14 +1,16 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="arduinobot">
-    
-    <!-- Include XACRO Variables -->
-    <xacro:include filename="$(find arduinobot_description)/urdf/arduinobot_variables.xacro" />
-    
+
     <!-- Include Gazebo Parameters -->
     <xacro:include filename="$(find arduinobot_description)/urdf/arduinobot_gazebo.xacro" />
 
     <!-- Include ros2_control Plugins -->
     <xacro:include filename="$(find arduinobot_description)/urdf/arduinobot_ros2_control.xacro" />
+    
+    <!-- Useful XACRO Variables (Properties) -->
+    <xacro:property name="PI" value="3.14159265359" />
+    <xacro:property name="effort" value="30.0" />
+    <xacro:property name="velocity" value="10.0" />
 
     <!-- Useful Macros -->
     <xacro:macro name="default_inertial" params="mass">
@@ -146,8 +148,6 @@
         </collision>
     </link>
 
-    <link name="tool_link"></link>
-
     
     <!-- Joints -->  
     <joint name="virtual_joint" type="fixed">
@@ -161,7 +161,7 @@
         <child link = "base_plate"/>
         <origin xyz="0 0 0.307"/>
         <axis xyz="0 0 1"/>
-        <limit lower="${joint_arm_lower_limit}" upper="${joint_arm_upper_limit}" 
+        <limit lower="-${PI / 2}" upper="${PI / 2}" 
                effort="${effort}" velocity="${velocity}"/>
     </joint>
 
@@ -170,7 +170,7 @@
         <child link = "forward_drive_arm"/>
         <origin xyz="-0.02 0 0.35"/>
         <axis xyz="1 0 0"/>
-        <limit lower="${joint_arm_lower_limit}" upper="${joint_arm_upper_limit}"
+        <limit lower="-${PI / 2}" upper="${PI / 2}"
                 effort="${effort}" velocity="${velocity}"/>
     </joint>
 
@@ -179,7 +179,7 @@
         <child link = "horizontal_arm"/>
         <origin xyz="0 0 0.8"/>
         <axis xyz="1 0 0"/>
-        <limit lower="${joint_arm_lower_limit}" upper="${joint_arm_upper_limit}"
+        <limit lower="-${PI / 2}" upper="${PI / 2}"
                effort="${effort}" velocity="${velocity}"/>
     </joint>
 
@@ -194,7 +194,7 @@
         <child link = "gripper_right"/>
         <origin xyz="-0.04 0.13 -0.1"/>
         <axis xyz="0 0 1"/>
-        <limit lower="${joint_finger_right_lower_limit}" upper="${joint_finger_right_upper_limit}" 
+        <limit lower="-${PI / 2}" upper="0.0" 
                effort="${effort}" velocity="${velocity}"/>
     </joint>
 
@@ -203,15 +203,9 @@
         <child link = "gripper_left"/>
         <origin xyz="-0.22 0.13 -0.1"/>
         <axis xyz="0 0 1"/>
-        <limit lower="${joint_finger_left_lower_limit}" upper="${joint_finger_left_upper_limit}" 
+        <limit lower="0.0" upper="${PI / 2}" 
                effort="${effort}" velocity="${velocity}"/>
         <mimic joint="joint_4" multiplier="-1"/>
-    </joint>
-
-    <joint name ="gripper_right_to_tool" type="fixed">
-        <parent link="gripper_right"/>
-        <child link = "tool_link"/>
-        <origin xyz="0 0 0"/>
     </joint>
 
 
