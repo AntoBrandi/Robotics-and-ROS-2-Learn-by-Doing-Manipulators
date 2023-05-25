@@ -8,6 +8,7 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
+find_package(arduinobot_msgs REQUIRED)
 
 add_executable(simple_publisher src/simple_publisher.cpp)
 ament_target_dependencies(simple_publisher rclcpp std_msgs)
@@ -18,10 +19,18 @@ ament_target_dependencies(simple_subscriber rclcpp std_msgs)
 add_executable(simple_parameter src/simple_parameter.cpp)
 ament_target_dependencies(simple_parameter rclcpp)
 
+add_executable(simple_service_server src/simple_service_server.cpp)
+ament_target_dependencies(simple_service_server rclcpp arduinobot_msgs)
+
+add_executable(simple_service_client src/simple_service_client.cpp)
+ament_target_dependencies(simple_service_client rclcpp arduinobot_msgs)
+
 install(TARGETS
   simple_publisher
   simple_subscriber
   simple_parameter
+  simple_service_server
+  simple_service_client
   DESTINATION lib/${PROJECT_NAME}
 )
 
