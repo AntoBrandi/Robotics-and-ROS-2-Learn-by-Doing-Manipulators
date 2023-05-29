@@ -54,8 +54,7 @@ private:
         tf2::Matrix3x3 m(q);
         m.getRPY(res->roll, res->pitch, res->yaw);
         RCLCPP_INFO_STREAM(rclcpp::get_logger("rclcpp"), "Corresponding euler angles roll: " << res->roll << 
-                                                         ", pitch: " << res->pitch << ", yaw: " << res->yaw <<
-                                                         ", into a quaternion.");
+                                                         ", pitch: " << res->pitch << ", yaw: " << res->yaw);
     }
 
 };
