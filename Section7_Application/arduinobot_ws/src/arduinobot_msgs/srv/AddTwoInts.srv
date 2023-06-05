@@ -1,0 +1,6 @@
+# Request
+int64 a
+int64 b
+---
+# Response
+int64 sum
