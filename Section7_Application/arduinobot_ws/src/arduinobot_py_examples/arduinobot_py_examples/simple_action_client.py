@@ -4,7 +4,7 @@ from rclpy.action import ActionClient
 from arduinobot_msgs.action import Fibonacci
 
 
-class SimpleActioClient(Node):
+class SimpleActionClient(Node):
 
     def __init__(self):
         super().__init__("simple_action_client")
@@ -42,7 +42,7 @@ class SimpleActioClient(Node):
 
 def main(args=None):
     rclpy.init(args=args)
-    action_client = SimpleActioClient()
+    action_client = SimpleActionClient()
     rclpy.spin(action_client)
 
 
