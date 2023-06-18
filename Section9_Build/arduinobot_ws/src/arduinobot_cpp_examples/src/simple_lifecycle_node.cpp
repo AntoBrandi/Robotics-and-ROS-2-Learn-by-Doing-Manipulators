@@ -1,5 +1,6 @@
 #include <rclcpp/rclcpp.hpp>
 #include <rclcpp_lifecycle/lifecycle_node.hpp>
+#include <std_msgs/msg/string.hpp>
 
 #include <chrono>
 #include <memory>
@@ -8,6 +9,7 @@
 
 
 using namespace std::chrono_literals;
+using std::placeholders::_1;
 
 
 class SimpleLifecycleNode : public rclcpp_lifecycle::LifecycleNode
@@ -19,17 +21,11 @@ public:
       rclcpp::NodeOptions().use_intra_process_comms(intra_process_comms))
   {}
 
-  void
-  publish()
-  {
-    RCLCPP_INFO(get_logger(), "Lifecycle node is running");
-  }
-
   rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn
   on_configure(const rclcpp_lifecycle::State &)
   {
-    timer_ = this->create_wall_timer(
-      1s, std::bind(&SimpleLifecycleNode::publish, this));
+    sub_ = create_subscription<std_msgs::msg::String>(
+        "chatter", 10, std::bind(&SimpleLifecycleNode::msgCallback, this, _1));
     RCLCPP_INFO(get_logger(), "Lifecycle node on_configure() called.");
     return rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn::SUCCESS;
   }
@@ -54,21 +50,31 @@ public:
   rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn
   on_cleanup(const rclcpp_lifecycle::State &)
   {
-    timer_.reset();
+    sub_.reset();
     RCLCPP_INFO(get_logger(), "Lifecycle node on_cleanup() called.");
     return rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn::SUCCESS;
   }
 
   rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn
-  on_shutdown(const rclcpp_lifecycle::State & state)
+  on_shutdown(const rclcpp_lifecycle::State &)
   {
-    timer_.reset();
+    sub_.reset();
     RCLCPP_INFO(get_logger(), "Lifecycle node on_shutdown() called");
     return rclcpp_lifecycle::node_interfaces::LifecycleNodeInterface::CallbackReturn::SUCCESS;
   }
 
+  void
+  msgCallback(const std_msgs::msg::String &msg)
+  {
+    auto state = get_current_state();
+    if(state.label() == "active")
+    {
+      RCLCPP_INFO_STREAM(get_logger(), "Lifecycle node heard: " << msg.data.c_str());
+    }    
+  }
+
 private:
-  std::shared_ptr<rclcpp::TimerBase> timer_;
+  rclcpp::Subscription<std_msgs::msg::String>::SharedPtr sub_;
 };
 
 
