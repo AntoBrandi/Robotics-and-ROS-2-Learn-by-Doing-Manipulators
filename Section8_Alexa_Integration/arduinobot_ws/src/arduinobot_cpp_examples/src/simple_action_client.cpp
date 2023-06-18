@@ -3,6 +3,8 @@
 #include <rclcpp_components/register_node_macro.hpp>
 #include "arduinobot_msgs/action/fibonacci.hpp"
 
+#include <memory>
+
 
 using namespace std::chrono_literals;
 using namespace std::placeholders;
