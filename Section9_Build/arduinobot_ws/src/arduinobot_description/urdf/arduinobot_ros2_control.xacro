@@ -3,13 +3,33 @@
 
     <ros2_control name="RobotSystem" type="system">
 
-        <xacro:property name="PI" value="3.14159265359" />
-
-        <!-- ros2_control Gazebo -->
+    <xacro:property name="PI" value="3.14159265359" />
+    
+    <!-- ros2_control Gazebo -->
+    <xacro:if value="$(arg is_sim)">
         <hardware>
             <plugin>gazebo_ros2_control/GazeboSystem</plugin>
         </hardware>
+            
+        <joint name="joint_5">
+            <param name="mimic">joint_4</param>
+            <param name="multiplier">-1</param>
+            <command_interface name="position">
+            <param name="min">${joint_finger_left_lower_limit}</param>
+            <param name="max">${joint_finger_left_upper_limit}</param>
+            </command_interface>
+        </joint>
+    </xacro:if>
 
+    <!-- ros2_control Real Robot -->
+    <xacro:unless value="$(arg is_sim)">
+        <hardware>
+          <plugin>arduinobot_controller/ArduinobotInterface</plugin>
+          <param name="port">/dev/ttyUSB0</param>
+        </hardware>
+    </xacro:unless>
+
+        <!-- ros2_control Common Interfaces -->
         <joint name="joint_1">
             <command_interface name="position">
             <param name="min">-${PI / 2}</param>
@@ -40,15 +60,6 @@
             <param name="max">0.0</param>
             </command_interface>
             <state_interface name="position"/>
-        </joint>
-
-        <joint name="joint_5">
-            <param name="mimic">joint_4</param>
-            <param name="multiplier">-1</param>
-            <command_interface name="position">
-            <param name="min">0.0</param>
-            <param name="max">${PI / 2}</param>
-            </command_interface>
         </joint>
     </ros2_control>
 

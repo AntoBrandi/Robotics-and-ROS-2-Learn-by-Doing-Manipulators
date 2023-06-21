@@ -1,6 +1,9 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="arduinobot">
 
+    <!-- Load Simulated or Real Hardware Interfaces -->
+    <xacro:arg name="is_sim" default="true"/>
+
     <!-- Include Gazebo Parameters -->
     <xacro:include filename="$(find arduinobot_description)/urdf/arduinobot_gazebo.xacro" />
 
