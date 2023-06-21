@@ -1,7 +1,7 @@
-# Request
+# Goal
 int32 order
 ---
-# Response
+# Result
 int32[] sequence
 ---
 # Feedback

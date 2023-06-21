@@ -6,10 +6,6 @@
 #define SERVO_ELBOW_PIN 10
 #define SERVO_GRIPPER_PIN 11
 
-// Define the working range for each joint
-#define MIN_RANGE 0
-#define MAX_RANGE 180
-
 // Define the start configuration of the joints
 #define BASE_START 90
 #define SHOULDER_START 90
@@ -29,7 +25,7 @@ char value[4] = "000";
 
 /*
  * This function moves a given servo smoothly from a given start position to a given end position.
- * The mouvement can be both clockwise or counterclockwise based on the values assigned to
+ * The movement can be both clockwise or counterclockwise based on the values assigned to
  * the start position and end position
  */
 void reach_goal(Servo& motor, int goal){
@@ -121,7 +117,7 @@ void loop() {
       value[0] = '0';
       value[1] = '0';
       value[2] = '0';
-      value[2] = '\0';
+      value[3] = '\0';
     }
     // Plain number
     else
