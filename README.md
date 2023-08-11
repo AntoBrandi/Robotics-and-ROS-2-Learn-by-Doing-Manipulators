@@ -67,7 +67,7 @@ Apart from explaining in detail all the functionalities and the logic of **ROS**
 * Control
 
 Looks funny? Check it out on the following platforms:
-* [Udemy](https://www.udemy.com/course/self-driving-and-ros-learn-by-doing-odometry-control/?couponCode=LEARNBYDOING)
+* [Udemy](https://www.udemy.com/course/robotics-and-ros-2-learn-by-doing-manipulators/?referralCode=4B27D2CF97C1E099DD4C)
 
 
 <!-- GETTING STARTED -->
