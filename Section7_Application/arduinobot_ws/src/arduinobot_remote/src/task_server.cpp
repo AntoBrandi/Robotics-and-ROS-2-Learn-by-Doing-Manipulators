@@ -79,7 +79,7 @@ private:
     }
     else if (goal_handle->get_goal()->task_number == 2)
     {
-      arm_joint_goal = {-1.57,0.0,-1.0};
+      arm_joint_goal = {-1.57,0.0,-0.9};
       gripper_joint_goal = {0.0, 0.0};
     }
     else
