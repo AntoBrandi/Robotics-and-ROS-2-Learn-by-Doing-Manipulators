@@ -69,6 +69,18 @@ Apart from explaining in detail all the functionalities and the logic of **ROS**
 Looks funny? Check it out on the following platforms:
 * [Udemy](https://www.udemy.com/course/robotics-and-ros-2-learn-by-doing-manipulators/?referralCode=4B27D2CF97C1E099DD4C)
 
+#### Robotics and ROS - Learn by Doing! Manipulators
+<br />
+<p align="center">
+   <img src="images/cover_manipulators-1.png" alt="Cover Manipulators ROS 1">
+</p>
+Do you want to master ROS as well? 
+
+Despite many companies already started switching to ROS 2, most of the software is currently developed in ROS 1 and it will be at the core of their software for many more years!
+
+Knowing both ROS 1 and ROS 2 will position you at the forefront of this demand, making you an attractive candidate for a wide range of roles, for this reason you can create and code your robotic arm both using ROS 1 and ROS 2:
+* [Udemy](https://www.udemy.com/course/robotics-and-ros-learn-by-doing-manipulators/?referralCode=6EDAA8501C5E3CCEE526)
+
 
 <!-- GETTING STARTED -->
 ## Getting Started
