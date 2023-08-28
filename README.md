@@ -72,7 +72,7 @@ Looks funny? Check it out on the following platforms:
 #### Robotics and ROS - Learn by Doing! Manipulators
 <br />
 <p align="center">
-   <img src="images/cover_manipulators-1.png" alt="Cover Manipulators ROS 1">
+   <img src="images/cover_manipulators_1.png" alt="Cover Manipulators ROS 1">
 </p>
 Do you want to master ROS as well? 
 
