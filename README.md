@@ -49,14 +49,14 @@ Furthermore, all the laboratory classes in which we are going to develop the act
 ### Other Courses
 If you find this course interesting and you are passionate about robotics in general (not limited to manipulators), then you definitely have to take a look at my outher courses!
 
-#### Self Driving and ROS - Learn by Doing! Odometry & Control
+#### Self Driving and ROS 2 - Learn by Doing! Odometry & Control
 <br />
 <p align="center">
-   <img src="images/cover_self_driving.png" alt="Cover Self-Driving">
+   <img src="images/cover_self_driving_2.png" alt="Cover Self-Driving 2">
 </p>
 
 If you are passionate about Self-Driving and you want to make a real robot Autonomously Navigate, then this course is for you! 
-Apart from explaining in detail all the functionalities and the logic of **ROS**, the Robot Operating System, it covers some key concepts of Autonomous Navigation such as
+Apart from explaining in detail all the functionalities and the logic of **ROS 2**, the latest version of the Robot Operating System, it covers some key concepts of Autonomous Navigation such as
 
 * Sensor Fusion
 * Kalman Filter
@@ -67,14 +67,26 @@ Apart from explaining in detail all the functionalities and the logic of **ROS**
 * Control
 
 Looks funny? Check it out on the following platforms:
-* [Udemy](https://www.udemy.com/course/robotics-and-ros-2-learn-by-doing-manipulators/?referralCode=4B27D2CF97C1E099DD4C)
+* [Udemy](https://www.udemy.com/course/self-driving-and-ros-2-learn-by-doing-odometry-control/?referralCode=50BCC4E84DB2DB09BFB3)
+
+#### Self Driving and ROS - Learn by Doing! Odometry & Control
+<br />
+<p align="center">
+   <img src="images/cover_self_driving.png" alt="Cover Self-Driving">
+</p>
+Do you want to master Self-Driving with **ROS** as well? 
+
+Despite many companies already started switching to ROS 2, most of the Self-Driving software is currently developed in ROS 1 and it will be at the core of their software for many more years!
+
+Knowing both ROS 1 and ROS 2 will position you at the forefront of this demand, making you an attractive candidate for a wide range of roles, for this reason you can create and code your robotic arm both using ROS 1 and ROS 2:
+* [Udemy](https://www.udemy.com/course/self-driving-and-ros-learn-by-doing-odometry-control/?referralCode=5B857932D7C6FE9D014D)
 
 #### Robotics and ROS - Learn by Doing! Manipulators
 <br />
 <p align="center">
    <img src="images/cover_manipulators_1.png" alt="Cover Manipulators ROS 1">
 </p>
-Do you want to master ROS as well? 
+Do you want to master Robot Manipulators with **ROS** as well? 
 
 Despite many companies already started switching to ROS 2, most of the software is currently developed in ROS 1 and it will be at the core of their software for many more years!
 
