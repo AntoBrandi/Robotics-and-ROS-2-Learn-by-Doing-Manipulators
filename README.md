@@ -6,7 +6,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-   <img src="images/cover_manipulators.png" alt="Cover">
+   <img src="images/cover_manipulators.png" alt="Cover Manipulators">
 </p>
 
 
@@ -14,7 +14,9 @@
 ## Table of Contents
 
 * [About the Course](#about-the-course)
-  * [Other Courses](#other-courses)
+* [Other Courses](#other-courses)
+   * [Self Driving and ROS 2 - Learn by Doing! Odometry & Control](#odometry-control)
+   * [Self Driving and ROS 2 - Learn by Doing! Map & Localization](#map-localization)
 * [Getting Started](#getting-started)
   * [Prerequisites](#prerequisites)
 * [Installation](#installation)
@@ -52,7 +54,7 @@ If you find this course interesting and you are passionate about robotics in gen
 #### Self Driving and ROS 2 - Learn by Doing! Odometry & Control
 <br />
 <p align="center">
-   <img src="images/cover_self_driving_2.png" alt="Cover Self-Driving 2">
+   <img src="images/cover_odometry_control.png" alt="Cover Odometry Control">
 </p>
 
 If you are passionate about Self-Driving and you want to make a real robot Autonomously Navigate, then this course is for you! 
@@ -69,29 +71,42 @@ Apart from explaining in detail all the functionalities and the logic of **ROS 2
 Looks funny? Check it out on the following platforms:
 * [Udemy](https://www.udemy.com/course/self-driving-and-ros-2-learn-by-doing-odometry-control/?referralCode=50BCC4E84DB2DB09BFB3)
 
-#### Self Driving and ROS - Learn by Doing! Odometry & Control
+#### Self Driving and ROS 2 - Learn by Doing! Map & Localization
 <br />
 <p align="center">
-   <img src="images/cover_self_driving.png" alt="Cover Self-Driving">
+   <img src="images/cover_map_localization.png" alt="Cover Map Localization">
 </p>
-Do you want to master Self-Driving with **ROS** as well? 
+Have you ever developed a mapping and a localization algorithm for your robot?
+Do you want to know more about SLAM (Simultaneous Localization and Mapping) and how to use it to enable your robot to create a nice and accurate map of the environment using a 2D LiDAR sensor?
 
-Despite many companies already started switching to ROS 2, most of the Self-Driving software is currently developed in ROS 1 and it will be at the core of their software for many more years!
+Then this course will teach you exaclty that, with many more topics:
+* Robot Localization
+* Map Representations
+* Mapping
+* SLAM
+* Obstacle Avoidance
+* Speed and Separation monitoring
+* Using LiDAR Sensors
 
-Knowing both ROS 1 and ROS 2 will position you at the forefront of this demand, making you an attractive candidate for a wide range of roles, for this reason you can create and code your robotic arm both using ROS 1 and ROS 2:
-* [Udemy](https://www.udemy.com/course/self-driving-and-ros-learn-by-doing-odometry-control/?referralCode=5B857932D7C6FE9D014D)
-
-#### Robotics and ROS - Learn by Doing! Manipulators
+enroll on the following platforms:
 <br />
 <p align="center">
-   <img src="images/cover_manipulators_1.png" alt="Cover Manipulators ROS 1">
+   <img src="images/cover_map_localization.png" alt="Cover Map & Localization">
 </p>
-Do you want to master Robot Manipulators with **ROS** as well? 
 
-Despite many companies already started switching to ROS 2, most of the software is currently developed in ROS 1 and it will be at the core of their software for many more years!
+* [Udemy](https://www.udemy.com/course/self-driving-and-ros-2-learn-by-doing-map-localization/?referralCode=8FC4AC725C57F7A93F79)
 
-Knowing both ROS 1 and ROS 2 will position you at the forefront of this demand, making you an attractive candidate for a wide range of roles, for this reason you can create and code your robotic arm both using ROS 1 and ROS 2:
-* [Udemy](https://www.udemy.com/course/robotics-and-ros-learn-by-doing-manipulators/?referralCode=6EDAA8501C5E3CCEE526)
+#### ROS 1 Nostalgic?
+
+Do you want to master Self-Driving or Manipulation using **ROS**, the first version of the Robot Operating System? 
+
+Despite many companies already started switching to ROS 2, knowing both ROS 1 and ROS 2 will position you at the forefront of this demand, making you an attractive candidate for a wide range of roles.
+
+Here you can access the same courses, where will be created the same robots, implementing the same functionalities in ROS 1
+
+* [Self Driving and ROS - Learn by Doing! Odometry & Control](https://www.udemy.com/course/self-driving-and-ros-learn-by-doing-odometry-control/?referralCode=5B857932D7C6FE9D014D)
+
+* [Robotics and ROS - Learn by Doing! Manipulators](https://www.udemy.com/course/robotics-and-ros-learn-by-doing-manipulators/?referralCode=6EDAA8501C5E3CCEE526)
 
 
 <!-- GETTING STARTED -->
