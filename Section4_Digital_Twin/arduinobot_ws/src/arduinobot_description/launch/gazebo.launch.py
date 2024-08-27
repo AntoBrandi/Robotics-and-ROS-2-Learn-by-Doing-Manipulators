@@ -1,6 +1,6 @@
 import os
-from os import pathsep
-from ament_index_python.packages import get_package_share_directory, get_package_prefix
+from pathlib import Path
+from ament_index_python.packages import get_package_share_directory
 
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription, SetEnvironmentVariable
@@ -13,8 +13,6 @@ from launch_ros.parameter_descriptions import ParameterValue
 
 def generate_launch_description():
     arduinobot_description = get_package_share_directory('arduinobot_description')
-    arduinobot_description_share = get_package_prefix('arduinobot_description')
-    gazebo_ros_dir = get_package_share_directory('gazebo_ros')
 
     model_arg = DeclareLaunchArgument(name='model', default_value=os.path.join(
                                         arduinobot_description, 'urdf', 'arduinobot.urdf.xacro'
@@ -22,10 +20,12 @@ def generate_launch_description():
                                       description='Absolute path to robot urdf file'
     )
 
-    model_path = os.path.join(arduinobot_description, "models")
-    model_path += pathsep + os.path.join(arduinobot_description_share, "share")
-
-    env_var = SetEnvironmentVariable('GAZEBO_MODEL_PATH', model_path)
+    gazebo_resource_path = SetEnvironmentVariable(
+        name="GZ_SIM_RESOURCE_PATH",
+        value=[
+            str(Path(arduinobot_description).parent.resolve())
+            ]
+        )
 
     robot_description = ParameterValue(Command(['xacro ', LaunchConfiguration('model')]),
                                        value_type=str)
@@ -36,30 +36,27 @@ def generate_launch_description():
         parameters=[{'robot_description': robot_description}]
     )
 
-    start_gazebo_server = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource(
-            os.path.join(gazebo_ros_dir, 'launch', 'gzserver.launch.py')
-        )
-    )
+    gazebo = IncludeLaunchDescription(
+                PythonLaunchDescriptionSource([os.path.join(
+                    get_package_share_directory("ros_gz_sim"), "launch"), "/gz_sim.launch.py"]),
+                launch_arguments=[
+                    ("gz_args", [" -v 4", " -r"]
+                    )
+                ]
+             )
 
-    start_gazebo_client = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource(
-            os.path.join(gazebo_ros_dir, 'launch', 'gzclient.launch.py')
-        )
-    )
-
-    spawn_robot = Node(package='gazebo_ros', executable='spawn_entity.py',
-                        arguments=['-entity', 'arduinobot',
-                                   '-topic', 'robot_description',
-                                  ],
-                        output='screen'
+    gz_spawn_entity = Node(
+        package="ros_gz_sim",
+        executable="create",
+        output="screen",
+        arguments=["-topic", "robot_description",
+                   "-name", "arduinobot"],
     )
 
     return LaunchDescription([
-        env_var,
         model_arg,
-        start_gazebo_server,
-        start_gazebo_client,
+        gazebo_resource_path,
         robot_state_publisher_node,
-        spawn_robot
+        gazebo,
+        gz_spawn_entity,
     ])
