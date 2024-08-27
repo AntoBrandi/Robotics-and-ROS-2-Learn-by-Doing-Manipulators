@@ -2,7 +2,7 @@
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="arduinobot">
 
     <!-- Start GZ or Ignition depending on ROS 2 Version -->
-  <xacro:arg name="is_ignition" default="true"/>
+    <xacro:arg name="is_ignition" default="true"/>
   
     <!-- Include Gazebo Parameters -->
     <xacro:include filename="$(find arduinobot_description)/urdf/arduinobot_gazebo.xacro" />
@@ -24,15 +24,6 @@
                      iyy="1.0" iyz="0.0"
                      izz="1.0" />
         </inertial>
-    </xacro:macro>
-    <xacro:macro name="default_transmission" params="number">
-        <transmission name="transmission_${number}">
-            <plugin>transmission_interface/SimpleTransmission</plugin>
-            <actuator name="motor_${number}" role="actuator1"/>
-            <joint name="joint_${number}"    role="joint1">
-                <mechanical_reduction>1.0</mechanical_reduction>
-            </joint>
-        </transmission>
     </xacro:macro>
 
 
@@ -211,11 +202,5 @@
         <mimic joint="joint_4" multiplier="-1"/>
     </joint>
 
-
-    <!-- Transmissions-->
-    <xacro:default_transmission number="1"/>
-    <xacro:default_transmission number="2"/>
-    <xacro:default_transmission number="3"/>
-    <xacro:default_transmission number="4"/>
 
 </robot>
