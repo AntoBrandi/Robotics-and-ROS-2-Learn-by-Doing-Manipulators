@@ -1,6 +1,9 @@
 <?xml version="1.0"?>
 <robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="arduinobot">
 
+    <!-- Start GZ or Ignition depending on ROS 2 Version -->
+  <xacro:arg name="is_ignition" default="true"/>
+  
     <!-- Include Gazebo Parameters -->
     <xacro:include filename="$(find arduinobot_description)/urdf/arduinobot_gazebo.xacro" />
 
