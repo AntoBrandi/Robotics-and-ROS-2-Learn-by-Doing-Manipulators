@@ -129,7 +129,7 @@ sudo apt-get update && sudo apt-get install -y \
      ros-humble-xacro \
      ros-humble-ros2-control \
      ros-humble-moveit \
-     ros-humble-ros2-controller \
+     ros-humble-ros2-controllers \
      ros-humble-gazebo-ros2-control 
 ```
 * Install VS Code and Arduino IDE on your PC in order to build and load the Arduino code on the device
