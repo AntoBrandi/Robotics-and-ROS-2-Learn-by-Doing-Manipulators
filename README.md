@@ -125,12 +125,12 @@ Download the ISO [Ubuntu 22.04](https://ubuntu.com/download/desktop) for your PC
 ```sh
 sudo apt-get update && sudo apt-get install -y \
      ros-humble-joint-state-publisher-gui \
-     ros-humble-gazebo-ros \
      ros-humble-xacro \
      ros-humble-ros2-control \
-     ros-humble-moveit \
-     ros-humble-ros2-controller \
-     ros-humble-gazebo-ros2-control 
+     ros-humble-moveit* \
+     ros-humble-ros2-controllers \
+     ros-humble-ros-gz-* \
+     ros-humble-*-ros2-control
 ```
 * Install VS Code and Arduino IDE on your PC in order to build and load the Arduino code on the device
 * Install Python and C++ additional libraries
