@@ -5,6 +5,20 @@
 
 namespace arduinobot_controller
 {
+
+std::string compensateZeros(const int value)
+{
+  std::string compensate_zeros = "";
+  if(value < 10){
+    compensate_zeros = "00";
+  } else if(value < 100){
+    compensate_zeros = "0";
+  } else {
+    compensate_zeros = "";
+  }
+  return compensate_zeros;
+}
+  
 ArduinobotInterface::ArduinobotInterface()
 {
 }
@@ -152,18 +166,22 @@ hardware_interface::return_type ArduinobotInterface::write(const rclcpp::Time &t
   std::string msg;
   int base = static_cast<int>(((position_commands_.at(0) + (M_PI / 2)) * 180) / M_PI);
   msg.append("b");
+  msg.append(compensateZeros(base));
   msg.append(std::to_string(base));
   msg.append(",");
   int shoulder = 180 - static_cast<int>(((position_commands_.at(1) + (M_PI / 2)) * 180) / M_PI);
   msg.append("s");
+  msg.append(compensateZeros(shoulder));
   msg.append(std::to_string(shoulder));
   msg.append(",");
   int elbow = static_cast<int>(((position_commands_.at(2) + (M_PI / 2)) * 180) / M_PI);
   msg.append("e");
+  msg.append(compensateZeros(elbow));
   msg.append(std::to_string(elbow));
   msg.append(",");
   int gripper = static_cast<int>(((-position_commands_.at(3)) * 180) / (M_PI / 2));
   msg.append("g");
+  msg.append(compensateZeros(gripper));
   msg.append(std::to_string(gripper));
   msg.append(",");
 
