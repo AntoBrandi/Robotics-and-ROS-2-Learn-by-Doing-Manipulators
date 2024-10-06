@@ -21,7 +21,7 @@ def generate_launch_description():
     )
 
     gazebo_resource_path = SetEnvironmentVariable(
-        name="GZ_SIM_RESOURCE_PATH",
+        name='GZ_SIM_RESOURCE_PATH',
         value=[
             str(Path(arduinobot_description).parent.resolve())
             ]
@@ -38,19 +38,27 @@ def generate_launch_description():
 
     gazebo = IncludeLaunchDescription(
                 PythonLaunchDescriptionSource([os.path.join(
-                    get_package_share_directory("ros_gz_sim"), "launch"), "/gz_sim.launch.py"]),
+                    get_package_share_directory('ros_gz_sim'), 'launch'), '/gz_sim.launch.py']),
                 launch_arguments=[
-                    ("gz_args", [" -v 4", " -r"]
+                    ('gz_args', [' -v 4', ' -r']
                     )
                 ]
              )
 
     gz_spawn_entity = Node(
-        package="ros_gz_sim",
-        executable="create",
-        output="screen",
-        arguments=["-topic", "robot_description",
-                   "-name", "arduinobot"],
+        package='ros_gz_sim',
+        executable='create',
+        output='screen',
+        arguments=['-topic', 'robot_description',
+                   '-name', 'arduinobot'],
+    )
+
+    gz_ros2_bridge = Node(
+        package='ros_gz_bridge',
+        executable='parameter_bridge',
+        arguments=[
+            '/clock@rosgraph_msgs/msg/Clock[gz.msgs.Clock',
+        ]
     )
 
     return LaunchDescription([
@@ -59,4 +67,5 @@ def generate_launch_description():
         robot_state_publisher_node,
         gazebo,
         gz_spawn_entity,
+        gz_ros2_bridge
     ])
