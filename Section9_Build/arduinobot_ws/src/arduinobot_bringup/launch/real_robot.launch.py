@@ -29,6 +29,7 @@ def generate_launch_description():
                 "launch",
                 "remote_interface.launch.py"
             ),
+            launch_arguments={"is_sim": "False"}.items()
         )
     
     return LaunchDescription([

@@ -43,9 +43,11 @@ install(TARGETS
   ARCHIVE DESTINATION lib
   LIBRARY DESTINATION lib
   RUNTIME DESTINATION bin
+  DESTINATION lib/${PROJECT_NAME}
 )
 
 install(PROGRAMS
+  ${PROJECT_NAME}/task_server.py
   ${PROJECT_NAME}/alexa_interface.py
   DESTINATION lib/${PROJECT_NAME}
 )

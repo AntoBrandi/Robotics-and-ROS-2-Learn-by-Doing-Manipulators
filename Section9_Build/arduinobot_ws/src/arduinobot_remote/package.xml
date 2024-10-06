@@ -18,6 +18,9 @@
   <depend>rclpy</depend>
 
   <exec_depend>ros2launch</exec_depend>
+  <exec_depend>python3-flask</exec_depend>
+  <exec_depend condition="$ROS_DISTRO >= iron">moveit_py</exec_depend>
+  <exec_depend>arduinobot_moveit</exec_depend>
 
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>
