@@ -17,16 +17,16 @@ def generate_launch_description():
         )
 
     joint_state_publisher_gui_node = Node(
-        package='joint_state_publisher_gui',
-        executable='joint_state_publisher_gui',
+        package="joint_state_publisher_gui",
+        executable="joint_state_publisher_gui",
         remappings=[
-            ('/joint_states', '/joint_commands'),
+            ("/joint_states", "/joint_commands"),
         ]
     )
 
     slider_control_node = Node(
-        package='arduinobot_controller',
-        executable='slider_control'
+        package="arduinobot_controller",
+        executable="slider_control"
     )
 
     return LaunchDescription(
