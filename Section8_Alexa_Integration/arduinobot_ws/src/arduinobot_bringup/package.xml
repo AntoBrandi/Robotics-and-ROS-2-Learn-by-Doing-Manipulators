@@ -9,6 +9,12 @@
 
   <buildtool_depend>ament_cmake</buildtool_depend>
 
+  <exec_depend>ros2launch</exec_depend>
+  <exec_depend>arduinobot_controller</exec_depend>
+  <exec_depend>arduinobot_description</exec_depend>
+  <exec_depend>arduinobot_moveit</exec_depend>
+  <exec_depend>arduinobot_remote</exec_depend>
+
   <test_depend>ament_lint_auto</test_depend>
   <test_depend>ament_lint_common</test_depend>
 
