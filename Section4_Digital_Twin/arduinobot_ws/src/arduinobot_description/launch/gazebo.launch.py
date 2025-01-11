@@ -28,7 +28,6 @@ def generate_launch_description():
         )
     
     ros_distro = os.environ["ROS_DISTRO"]
-    physics_engine = "" if ros_distro == "humble" else "--physics-engine gz-physics-bullet-featherstone-plugin"
 
     robot_description = ParameterValue(Command(["xacro ", LaunchConfiguration("model")]),
                                        value_type=str)
@@ -44,7 +43,7 @@ def generate_launch_description():
                 PythonLaunchDescriptionSource([os.path.join(
                     get_package_share_directory("ros_gz_sim"), "launch"), "/gz_sim.launch.py"]),
                 launch_arguments=[
-                    ("gz_args", [" -v 4 -r empty.sdf ", physics_engine]
+                    ("gz_args", [" -v 4 -r empty.sdf "]
                     )
                 ]
              )
