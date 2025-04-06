@@ -33,7 +33,7 @@ This repository contain the material used in the course **Robotics and ROS 2 - L
 
 * [Udemy](https://www.udemy.com/course/robotics-and-ros-learn-by-doing-manipulators/?couponCode=LEARNBYDOING)
 
-In this course I'll guid you through the creation of a real robotic arm that you can control with your voice using the Amazon Alexa voice assistant.
+In this course, I'll guide you through the creation of a real robotic arm that you can control with your voice using the Amazon Alexa voice assistant.
 Some of the concepts that are covered in this course are
 
 * Gazebo Simulation
@@ -44,12 +44,12 @@ Some of the concepts that are covered in this course are
 * Using Arduino with ROS 2
 * Interface Alexa with ROS 2
 
-Furthermore, all the laboratory classes in which we are going to develop the actual Software of our mobile robot are available both in **Pyhton** and in **C++** to let you have the freedom of choosing the programming language you like the most or become proficient in both!
+Furthermore, all the laboratory classes in which we are going to develop the actual Software of our mobile robot are available both in **Python** and in **C++** to let you have the freedom of choosing the programming language you like the most or become proficient in both!
 
 
 <!-- OTHER COURSES -->
 ### Other Courses
-If you find this course interesting and you are passionate about robotics in general (not limited to manipulators), then you definitely have to take a look at my outher courses!
+If you find this course interesting and you are passionate about robotics in general (not limited to manipulators), then you definitely have to take a look at my other courses!
 
 #### Self Driving and ROS 2 - Learn by Doing! Odometry & Control
 <br />
@@ -76,10 +76,10 @@ Looks funny? Check it out on the following platforms:
 <p align="center">
    <img src="images/cover_map_localization.png" alt="Cover Map Localization">
 </p>
-Have you ever developed a mapping and a localization algorithm for your robot?
+Have you ever developed a mapping and localization algorithm for your robot?
 Do you want to know more about SLAM (Simultaneous Localization and Mapping) and how to use it to enable your robot to create a nice and accurate map of the environment using a 2D LiDAR sensor?
 
-Then this course will teach you exaclty that, with many more topics:
+Then this course will teach you exactly that, with many more topics:
 * Robot Localization
 * Map Representations
 * Mapping
@@ -96,11 +96,34 @@ enroll on the following platforms:
 
 * [Udemy](https://www.udemy.com/course/self-driving-and-ros-2-learn-by-doing-map-localization/?referralCode=8FC4AC725C57F7A93F79)
 
+
+### Self Driving and ROS 2 - Learn by Doing! Plan & Navigation
+Have you ever developed a path-planning algorithm for your robot?
+Do you want to know more about Motion Planning algorithms and how to use them to autonomously move your robot while avoiding obstacles using a Costmap of the environment?
+
+Then this course will teach you exactly that, with many more topics:
+* Path Planning
+* Motion Planning
+* Decision Making
+* Behavior Trees
+* Obstacle Avoidance
+* Costmaps
+* Nav2
+
+Enroll on the following platforms:
+<br />
+<p align="center">
+   <img src="images/cover_plan_navigation.png" alt="Cover Plan & Navigation">
+</p>
+
+* [Udemy](https://www.udemy.com/course/self-driving-and-ros-2-learn-by-doing-plan-navigation/?referralCode=1F6AFF9E9A8E7D5D057A)
+
+
 #### ROS 1 Nostalgic?
 
 Do you want to master Self-Driving or Manipulation using **ROS**, the first version of the Robot Operating System? 
 
-Despite many companies already started switching to ROS 2, knowing both ROS 1 and ROS 2 will position you at the forefront of this demand, making you an attractive candidate for a wide range of roles.
+Despite many companies already starting to switch to ROS 2, knowing both ROS 1 and ROS 2 will position you at the forefront of this demand, making you an attractive candidate for a wide range of roles.
 
 Here you can access the same courses, where will be created the same robots, implementing the same functionalities in ROS 1
 
@@ -114,7 +137,7 @@ Here you can access the same courses, where will be created the same robots, imp
 You can decide whether to build the real robot or just have fun with the simulated one. The course can be followed either way, most of the lessons and most of the code will work the same in the simulation as in the real robot
 
 ### Prerequisites
-You don't need any prior knowledge of ROS 2 or of Robotics, I'll explain all the concepts as they came out and as they are needed to implement new functionalities to our robot.
+You don't need any prior knowledge of ROS 2 or of Robotics, I'll explain all the concepts as they come out and as they are needed to implement new functionalities to our robot.
 A basic knowledge of programming, either using **C++** or **Python** is required as this is not a Programming course and so I'll not dwell too much on basic Programming concepts.
 
 To prepare your PC you need:
@@ -191,7 +214,7 @@ Copy the link that provides ngrok and paste it in the section Endpoint of your A
 <!-- CONTRIBUTING -->
 ## Contributing
 
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
 
 1. Fork the Project
 2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
@@ -216,6 +239,7 @@ My Projects: [https://github.com/AntoBrandi](https://github.com/AntoBrandi)
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
+* [Course Cover Images](https://www.linkedin.com/in/delia-garc%C3%ADa-masegosa-109bb040/)
 * [Arduino 3D-Printed Robotic Arm](https://create.arduino.cc/projecthub/mircemk/arduino-3d-printed-robotic-arm-e824d8?ref=search&ref_id=robot%20arm&offset=86)
 * [EEZYbotARM](https://www.thingiverse.com/thing:1015238)
 
