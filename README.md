@@ -89,15 +89,15 @@ Then this course will teach you exactly that, with many more topics:
 * Using LiDAR Sensors
 
 enroll on the following platforms:
-<br />
-<p align="center">
-   <img src="images/cover_map_localization.png" alt="Cover Map & Localization">
-</p>
 
 * [Udemy](https://www.udemy.com/course/self-driving-and-ros-2-learn-by-doing-map-localization/?referralCode=8FC4AC725C57F7A93F79)
 
 
 ### Self Driving and ROS 2 - Learn by Doing! Plan & Navigation
+<br />
+<p align="center">
+   <img src="images/cover_plan_navigation.png" alt="Cover Plan & Navigation">
+</p>
 Have you ever developed a path-planning algorithm for your robot?
 Do you want to know more about Motion Planning algorithms and how to use them to autonomously move your robot while avoiding obstacles using a Costmap of the environment?
 
@@ -111,10 +111,6 @@ Then this course will teach you exactly that, with many more topics:
 * Nav2
 
 Enroll on the following platforms:
-<br />
-<p align="center">
-   <img src="images/cover_plan_navigation.png" alt="Cover Plan & Navigation">
-</p>
 
 * [Udemy](https://www.udemy.com/course/self-driving-and-ros-2-learn-by-doing-plan-navigation/?referralCode=1F6AFF9E9A8E7D5D057A)
 
